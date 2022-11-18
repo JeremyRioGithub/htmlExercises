@@ -1,8 +1,20 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .container {
     display: flex;
     text-align: center;
     flex-direction: row;
-    /* border: 5px solid #000; */
+    font-family: Arial;
+}
+
+.container-article {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
     font-family: Arial;
 }
 
@@ -13,12 +25,13 @@
     }
 }
 
-#h1 {
+#the {
     font-style: italic;
     font-size: 30px;
+    display: inline;
 }
 
-#h2 {
+#adventure {
     font-family: Arial;
     font-weight: bold;
     font-style: normal;
@@ -28,12 +41,21 @@
 #h3 {
     font-weight: bold;
     font-size: 45px;
+    background-color: #555;
 }
+
 #square {
         height: 50px;
         width: 50px;
         background-color: #555;
 }
+
+#box {
+    border: solid;
+    border: 5px;
+    border-radius: 10px;
+    border-style: dotted;
+   }
 
 #p {
     margin: 5vw;
