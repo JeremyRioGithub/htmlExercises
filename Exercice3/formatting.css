@@ -10,13 +10,30 @@ html {
     font-family: 'arial';
 }
 
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: grey;
+    color: black;
+}
+.liens {
+    display: inline;
+    background-color: dimgrey;
+}
+
+a {
+    background-color: dimgrey;
+    width: 50px;
+    word-break: break-all;
+}
+
 body {
     background-color: dimgrey;
 }
 
 .container {
     display: flex;
-    justify-items:center;
+    justify-items: center;
     justify-content: space-around;
     width: 60%;
     height: auto;
@@ -36,10 +53,24 @@ p {
 span {
     display: inline-block;
 }
+span:active {
+    display: inline-block;
+    font-size: 30px;
+    color: yellow;
+}
 span:last-child {
     color: red;
+    font-size: 30px;
 }
-span::first-letter {
+span:last-child:hover {
+    color: yellow;
+    font-size: 30px;
+}
+span:last-child:active {
+    color: yellow;
+    font-size: 100px;
+}
+span:first-child:first-letter {
     text-transform: uppercase;
 }
 
@@ -58,16 +89,34 @@ form {
     flex-direction: column;
 }
 
+label:active {
+    font-size: 30px;
+    color: yellow;
+}
+
 label::first-letter {
     text-transform: uppercase;
 }
 
 input {
     width: 100%;
+    background-color: white;
 }
-
-.bouton {
-    width: 50%;
+#bouton {
+    background-color: darkred;
+    border-radius: 4px;
+    width:80px;
+}
+#bouton:hover {
+    background-color: red;
+    border-radius: 4px;
+    width:80px;
+}
+#bouton:active {
+    background-color: yellow;
+    border-radius: 10px;
+    width:100px;
+    font-size: 20px;
 }
 
 @media screen and (max-width: 768px) {
