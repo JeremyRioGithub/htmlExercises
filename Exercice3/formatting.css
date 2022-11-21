@@ -89,6 +89,11 @@ form {
     flex-direction: column;
 }
 
+form:hover {
+    display: flex;
+    flex-direction: column;
+}
+
 label:active {
     font-size: 30px;
     color: yellow;
