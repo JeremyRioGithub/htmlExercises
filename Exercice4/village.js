@@ -5,6 +5,7 @@
 // 📌 nbor | 0
 // 📌 Batiments | [HDV
 
+// methode 1:
 class Village {
     constructor() {
         this.villageois = 1
@@ -29,11 +30,12 @@ class Village {
         return "Batiment:"+this.Batiments;
     }
 }
-let refractaire = new Village();
+let gauloisRefractaires = new Village();
+gauloisRefractaires.display("Ressources");
+gauloisRefractaires.display("Villageois");
+gauloisRefractaires.display("Batiments");
 
-refractaire.display("Ressources");
-refractaire.display("Villageois");
-refractaire.display("Batiments");
+// methode 2:
 let village = {
     villageois: 1,
     nbbois: 100,
@@ -43,6 +45,7 @@ let village = {
 }
 console.log(village)
 
+// methode 3:
 let village2 = new Object()
 village2.villageois = 1
 village2.nbbois = 100

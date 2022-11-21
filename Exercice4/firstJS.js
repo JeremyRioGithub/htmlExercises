@@ -50,3 +50,20 @@ function filter(array, verifcallback) {
     return arrayVerif
 }
 console.log(filter([8,9,10,11,0,1,2,3], (elem) => elem>=5))
+
+class OrcChaman {
+    constructor() {
+        this.age=154
+        this.sex="female"
+        this.name="Orchark"
+    }
+    displayAge(){
+        console.log("I'm "+this.age+" years old.")
+    }
+    displayName(){
+        console.log("Hello my name is "+this.name+".")
+    }
+}
+let personnage = new OrcChaman
+personnage.displayName();
+personnage.displayAge();
