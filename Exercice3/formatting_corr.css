@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: grey;
+    color: black;
+}
+.liens {
+    display: inline;
+    background-color: dimgrey;
+}
+
+a {
+    background-color: dimgrey;
+    width: 50px;
+    word-break: break-all;
+}
+
+body {
+    background-color: #424242;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.75rem;
+    text-align: center;
+}
+h1 {
+    font-size: 2.75rem;
+}
+
+span {
+    display: inline-block;
+}
+span:active {
+    display: inline-block;
+    font-size: 3rem;
+    color: yellow;
+}
+span:last-child {
+    color: red;
+    font-size: 3rem;
+}
+span:last-child:hover {
+    color: yellow;
+    font-size: 3rem;
+}
+span:last-child:active {
+    color: yellow;
+    font-size: 3rem;
+}
+span:first-child:first-letter {
+    text-transform: uppercase;
+}
+
+.formulaire {
+    justify-content: space-between;
+    background: #212121;
+    border-radius: 4px;
+    box-shadow: 10px 10px 10px 2px #ff52521a;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form:hover {
+    display: flex;
+    flex-direction: column;
+}
+
+label:active {
+    font-size: 3rem;
+    color: yellow;
+}
+
+label::first-letter {
+    text-transform: uppercase;
+}
+
+input {
+    width: 100%;
+    background-color: white;
+}
+.input-group {
+    display:flex;
+    flex-direction: column;
+}
+.input-group label {
+    font-size: .9rem;
+    letter-spacing: 1px;
+}
+.input-group input {
+    font-size: .9rem;
+    letter-spacing: 1px;
+    padding: 4px;
+}
+.input-group input:focus {
+    font-size: .9rem;
+    letter-spacing: 1px;
+    padding: 4px;
+}
+button {
+    padding: 10px;
+    margin-top:20px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    background-color: red;
+}
+button:hover {
+    padding: 10px;
+    margin-top:20px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: white;
+}
+button:active {
+    padding: 10px;
+    margin-top:20px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: black;
+    background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+}
