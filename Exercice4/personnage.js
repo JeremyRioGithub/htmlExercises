@@ -20,7 +20,7 @@
 // l'attribut supplémentaire :
 // 📌 mana
 
-export class Personnage {
+class Personnage {
     constructor(nom, sante, force){
         this.nom = nom
         this.sante = sante
@@ -42,7 +42,7 @@ export class Personnage {
         return this.whoAmI()+"\tNom: "+this.nom+", Sante: "+this.sante+", Force: "+this.force
     }
 }
-export class Aventurier extends Personnage {
+class Aventurier extends Personnage {
     constructor(nom, sante, force, xp){
         super (nom, sante, force)
         this.xp = xp
@@ -63,7 +63,7 @@ export class Aventurier extends Personnage {
         return this.whoAmI() +"\t" + super.displayProperties() + ", Xp: " + this.xp
     }
 }
-export class Guerrier extends Personnage {
+class Guerrier extends Personnage {
     constructor(nom, sante, force, rage){
         super (nom, sante, force)
         this.rage = rage
@@ -84,7 +84,7 @@ export class Guerrier extends Personnage {
         return this.whoAmI() +"\t" + super.displayProperties() + ", Rage: "+this.rage
     }
 }
-export class Palladin extends Aventurier {
+class Palladin extends Aventurier {
     constructor(nom, sante, force, xp, vertu){
         super (nom, sante, force, xp)
         this.vertu = vertu
@@ -105,7 +105,7 @@ export class Palladin extends Aventurier {
         return this.whoAmI() +"\t" + super.displayProperties() + ", Vertu: "+this.vertu
     }
 }
-export class Mage extends Aventurier {
+class Mage extends Aventurier {
     constructor(nom, sante, force, xp, mana){
         super (nom, sante, force, xp)
         this.mana = mana
@@ -126,13 +126,5 @@ export class Mage extends Aventurier {
         return this.whoAmI() +"\t"+ super.displayProperties() + ", Mana: "+this.mana
     }
 }
-// let personnage1 = new Personnage("Borg", 100, 54)
-// let aventurier1 = new Aventurier("Jake", 65, 140, 1326)
-// let guerrier1 = new Guerrier("Krug", 65, 140, 0.3)
-// let palladin1 = new Palladin("poly", 26, 53, 35, 0.2)
-// let mage1 = new Mage("Mergnum", 65, 140, 35, 132)
-// personnage1.displayInfo()
-// aventurier1.displayInfo()
-// guerrier1.displayInfo()
-// palladin1.displayInfo()
-// mage1.displayInfo()
+
+export {Personnage, Aventurier, Guerrier, Palladin, Mage};
