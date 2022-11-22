@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="Personnage.js" type="text/javascript"></script>
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="personnage-p1">
+            <img id="p1" src="assets/vampire.png" alt="personnage" />
+        </div>
+        <div id="personnage-p2">
+            <img id="p2" src="assets/vampire.png" alt="personnage" />
+        </div>
+        <button onclick="p1.annonce();">Annonce p1</button>
+        <button onclick="p2.annonce();">Annonce p2</button>
+    </div>
+</body>
+<script type="text/javascript">
+    const p1 = new Personnage(1, "Vampirette");
+    const p2 = new Personnage(2, "Sanguy");
+</script>
+</html>

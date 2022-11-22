@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body #wrapper {
+    background-image: url("assets/Forest.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+  }
+  body #wrapper img {
+    position: absolute;
+    bottom: 0;
+  }
+  body #wrapper img#p2 {
+    transform: scaleX(-1);
+    right: 0;
+  }
+  body #wrapper .paragraphe-p1, body #wrapper .paragraphe-p2 {
+    position: absolute;
+  }
+  body #wrapper .paragraphe-p1 {
+    bottom: 450px;
+    left: 270px;
+    padding: 10px 20px;
+    border: 1px solid #535353;
+    background-color: #a9a9a9;
+  }
+  body #wrapper .paragraphe-p2 {
+    bottom: 450px;
+    right: 270px;
+    padding: 10px 20px;
+    border: 1px solid #535353;
+    background-color: #a9a9a9;
+  }
+  
+  /*# sourceMappingURL=style.css.map */
+  

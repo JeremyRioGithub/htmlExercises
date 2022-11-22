@@ -7,7 +7,7 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="Animation.mjs" type="text/javascript"></script>
+    <script src="Animation.js" type="text/javascript"></script>
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="formatt.css" />
 </head>
@@ -19,39 +19,49 @@
             <div id="cube" style="width: 200px; height: 200px; background-color:red;"></div>
             <p>Move your mouse to see its position.</p>
             <button id="bouton" onclick="onClick()">Click Me</button>
+            <button id="bouton2">Clique Moi</button>
             <p id="paragraphe"></p>
         </main>
     </div>
 </body>
 
 <script type="text/javascript">
-    // play with the rectangle
     const h1 = document.getElementById("h1");
     let a1 = new Animation(h1);
     a1.changerCouleur("blue");
+
+    // play with the rectangle
     const cube1 = document.getElementById("cube");
     let c1 = new Animation(cube1);
     c1.agrandir(300, 300);
-    c1.deplacer(120, 150);
+    c1.deplacer(200, 150);
     c1.pivoter(10);
     c1.disparaitre();
     c1.apparaitre();
 
     // display mouse coordinates
-    let screenLog = document.getElementById("paragraphe");
-    let e1 = new Animation(screenLog);
-    e1.key();
+    c1.key();
 
     // changer couleur bouton avec le clic
     let index = 0;
-    let bgColors = ['salmon', 'white']
-    let textColor = ['white', 'black']
+    let bgColors = ['salmon', 'white'];
+    let textColor = ['white', 'black'];
     let bouton = document.getElementById("bouton");
-    let onClick = () => {
-        bouton.style.backgroundColor = bgColors[index%2];
-        bouton.style.color = textColor[index%2];
+    onClick = () => {
+        bouton.style.backgroundColor = bgColors[index % 2];
+        bouton.style.color = textColor[index % 2];
         index += 1;
-    };
+    }
+
+    // test bouton2
+    let bouton2 = document.getElementById("bouton2");
+    // let afficherMessage = () => {
+    //     alert("Le bouton a été cliqué");
+    // }
+    function afficherMessage() {
+        console.log("Le bouton a été cliqué");
+    }
+    bouton2.addEventListener("click", afficherMessage);
 
 </script>
 
