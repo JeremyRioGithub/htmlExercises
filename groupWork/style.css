@@ -1,42 +1,41 @@
-/* * {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body #wrapper {
-  background-image: url("assets/Forest.jpg");
+body #wrapper #game {
+  background-image: url("assets/images/Forest.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
   height: 100vh;
+  display: none;
 }
-body #wrapper img {
+body #wrapper #game img {
   position: absolute;
-  bottom: 0;
+  bottom: 30%;
 }
-body #wrapper img#p2 {
+body #wrapper #game img#perso1 {
+  left: 10%;
+}
+body #wrapper #game img#perso2 {
+  right: 10%;
   transform: scaleX(-1);
-  right: 0;
 }
-body #wrapper .paragraphe-p1, body #wrapper .paragraphe-p2 {
+body #wrapper #game .paragraphe-p1, body #wrapper #game .paragraphe-p2 {
   position: absolute;
-}
-body #wrapper .paragraphe-p1 {
-  bottom: 450px;
-  left: 5px;
+  bottom: 60%;
   padding: 10px 20px;
   border: 1px solid #535353;
   background-color: #a9a9a9;
   animation: fadeIn 2s;
 }
-body #wrapper .paragraphe-p2 {
-  bottom: 450px;
-  right: 5px;
-  padding: 10px 20px;
-  border: 1px solid #535353;
-  background-color: #a9a9a9;
-  animation: fadeIn 2s;
+body #wrapper #game .paragraphe-p1 {
+  left: 15%;
+}
+body #wrapper #game .paragraphe-p2 {
+  right: 15%;
 }
 @keyframes fadeIn {
   0% {
@@ -46,26 +45,38 @@ body #wrapper .paragraphe-p2 {
     opacity: 1;
   }
 }
-body #wrapper .box {
-  width: 200px;
-  height: 40px;
+body #wrapper #game .box {
   position: absolute;
-  bottom: 10px;
+  bottom: 10%;
+  border: 2px solid black;
+  background-color: gray;
 }
-body #wrapper .box button {
+body #wrapper #game .box button {
   border: 1px solid #775f3b;
   background-color: #e0a853;
   color: #000;
   height: 100%;
   padding: 0 5px;
 }
-body #wrapper .box progress {
+body #wrapper #game .box .sorts img {
+  width: 74px;
+  cursor: pointer;
+  position: initial;
+}
+body #wrapper #game progress {
   position: absolute;
-  bottom: 400px;
+  top: -25%;
+  border: 1px solid yellow;
 }
-body #wrapper .personnage-b1 {
-  left: 150px;
+body #wrapper #game .personnage-b1 {
+  left: 10%;
 }
-body #wrapper .personnage-b2 {
-  right: 150px;
-} */
+body #wrapper #game .personnage-b1 progress {
+  left: 0%;
+}
+body #wrapper #game .personnage-b2 {
+  right: 10%;
+}
+body #wrapper #game .personnage-b2 progress {
+  right: 0%;
+}
