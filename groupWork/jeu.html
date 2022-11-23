@@ -3,11 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="Personnage.js" type="module/javascript"></script>
-    <script src="app.js" type="module/javascript"></script>
     <link href="style.css" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -15,17 +12,20 @@
 <body>
     <div id="wrapper">
         <form name="ChoixPersonnage">
-            <select name="Liste" onChange="play()">
+            <select id="Liste" name="Liste">
                 <option>Choisir un personnage
-                <option value="Vampirette">Vampire
-                <option value="Sanguy">Mage
-                <option value="Ninja">Ninja
+                <option id="Vampirette" value="Vampirette">Vampire
+                <option id="Sanguy" value="Sanguy">Mage
+                <option id="Ninja" value="Ninja">Ninja
             </select>
         </form>
-        <!-- <button id="b1" onclick="play()">Jouer</button> -->
+        <button id="b1">Jouer</button>
     </div>
 </body>
+<script src="Personnage.js" type="module"></script>
+<script src="app.js" type="module"></script>
 <script type="text/javascript">
+
 </script>
 
 </html>

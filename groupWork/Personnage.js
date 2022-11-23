@@ -79,6 +79,7 @@ class Spell{
     }
 }
 export {Personnage};
+
 // class Vampire extends Personnage{
 //     constructor(id, name){
 //         super(id, name)
