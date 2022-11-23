@@ -11,7 +11,7 @@ class Spell{
             console.log("Tu n'as pas de mana");
         } else {
             caster.endurance -= this.staminaCost;
-            target.hp -= this.damage;
+            target.subirDommage(this.damage);
             this.castCallBack();
         }
     }

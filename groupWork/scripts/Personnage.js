@@ -7,6 +7,7 @@ class Personnage {
         this.strength = 10;
         this.endurance = 25;
         this.opponent = null;
+        this.attaques = null;
     }
 
     subirDommage(montant_dommage) {
@@ -17,10 +18,13 @@ class Personnage {
         const degats = this.strength;
         target.subirDommage(degats);
         this.endurance -= 2;
+        let choixAttaque = this.jouerTour(Math.floor(Math.random() * this.attaques.length));
+        this.castSpell(choixAttaque,this,target);
     }
 
     jouerTour(choix) {
         console.log(this.attaques[choix]);
+        return this.attaques[choix]
     }
 
     annonce() {
@@ -57,6 +61,9 @@ class Personnage {
 
     get getEndurance() {
         return this.endurance;
+    }
+    castSpell(spell, caster, target){
+        spell.cast(caster,target)
     }
 
     // set setHp(id) {
