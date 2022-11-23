@@ -6,7 +6,8 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="Personnage.js" type="text/javascript"></script>
+    <script src="Personnage.js" type="module/javascript"></script>
+    <script src="app.js" type="module/javascript"></script>
     <link href="style.css" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -14,49 +15,17 @@
 <body>
     <div id="wrapper">
         <form name="ChoixPersonnage">
-            <select name="Liste" onsubmit="play()">
+            <select name="Liste" onChange="play()">
                 <option>Choisir un personnage
                 <option value="Vampirette">Vampire
                 <option value="Sanguy">Mage
                 <option value="Ninja">Ninja
             </select>
         </form>
-        <button id="b1" onclick="play()">Jouer</button>
+        <!-- <button id="b1" onclick="play()">Jouer</button> -->
     </div>
 </body>
 <script type="text/javascript">
-    const divWrap = document.getElementById("wrapper");
-    // const p1 = new Personnage(1, "VAmpirete");
-    // const p2 = new Personnage(2, "Sanguy");
-    play = () => {
-        let indexPersonnageChoice = document.ChoixPersonnage.Liste.selectedIndex;
-        if (indexPersonnageChoice == 0) return;
-        res = document.ChoixPersonnage.Liste.options[indexPersonnageChoice].value;
-        console.log(res);
-        const p1 = new Personnage(1, res);
-        const p2 = new Personnage(2, "Sanguy");
-
-        // display img1
-        divWrap.innerHTML = `
-        <div id="personnage-p1">
-            <img id="p1" src="assets/vampire.png" alt="personnage" />
-        </div>
-        <div class="box personnage-b1">
-            <progress class="progress" value="150" max="200">75%</progress>
-            <div class="sorts">
-                <button onclick="p1.annonce();">Se présenter</button>
-            </div>
-        </div>
-        <div id="personnage-p2">
-            <img id="p2" src="assets/vampire.png" alt="personnage" />
-        </div>
-        <div class="box personnage-b2">
-            <progress class="progress" value="150" max="200">75%</progress>
-            <div class="sorts">
-                <button onclick="p2.annonce();">Se présenter</button>
-            </div>
-        </div>`
-    }
 </script>
 
 </html>

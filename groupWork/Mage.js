@@ -1,7 +1,8 @@
-class Personnage {
+import {Personnage, Spell} from './Personnage.js';
+
+class Mage extends Personnage {
     constructor(id, name) {
-        this.id = id;
-        this.name = name;
+        super(id, name)
         this.hp = 100;
         this.strength = 10;
         this.endurance = 25;
