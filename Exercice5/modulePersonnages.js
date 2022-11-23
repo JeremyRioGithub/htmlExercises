@@ -1,8 +1,8 @@
-import {Personnage, Spell} from './personnage.js';
+import {Personnage, Spell} from './Personnage.js';
 
 // instanciate each of the characters:
-let personnage1 = new Personnage("Borg", [new Spell("'attaque sournoise'", 40, 10, () => {console.log("C'est sournois !")})])
-let personnage2 = new Personnage("Klaus", [new Spell("'se Faire Jeter Comme Un Malpropre'", 20, 30, () => {console.log("Tu vas te faire jeter comme un malpropre !")})])
+let personnage1 = new Personnage(1,"Borg", [new Spell("'attaque sournoise'", 40, 10, () => {console.log("C'est sournois !")})])
+let personnage2 = new Personnage(2,"Klaus", [new Spell("'se Faire Jeter Comme Un Malpropre'", 20, 30, () => {console.log("Tu vas te faire jeter comme un malpropre !")})])
 
 // // instanciate new spell : EDIT: not use
 // let sp1 = new Spell("attaque sournoise", 40, 10, () => {console.log("Attaque sournoise !")})

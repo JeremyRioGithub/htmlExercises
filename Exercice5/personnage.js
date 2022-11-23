@@ -32,27 +32,31 @@
 // new Spell("série de coups", 40, 10, () => {console.log("*** ORAORAORAORAORAORA ***"));
 
 class Personnage {
-    constructor(nom, attaques){
+    constructor(id, nom, attaques){
+        this.id=id
         this.nom = nom;
         this.hp = 100;
         this.strength = 10;
         this.endurance = 25;
         this.opponent = null;
-        // this.attaques = ["'attaque Sournoise'", "'se Faire Jeter Comme Un Malpropre'"];
-        // this.attaques = [
-        //     new Spell("'attaque sournoise'", 40, 10, () => {console.log("C'est sournois !")}),
-        //     new Spell("'se Faire Jeter Comme Un Malpropre'", 20, 30, () => {console.log("Tu vas te faire jeter comme un malpropre !")})
-        // ];
         this.attaques = attaques
     };
     seSoigner(valeur){
         this.hp+=valeur;
     }
     annonce(){
-        console.log(`Je m'appelle ${this.nom}, mes stats sont :\n\thp : ${this.hp}\n\tstrength : ${this.strength}\n\tendurance: ${this.endurance}`);
+        // console.log(`Je m'appelle ${this.nom}, mes stats sont :\n\thp : ${this.hp}\n\tstrength : ${this.strength}\n\tendurance: ${this.endurance}`);
+        let perso = document.getElementById(`personnage-p${this.id}`);
+        let p = document.createElement('p');
+        p.textContent = `Je m'appelle ${this.name},
+             mes stats sont :  
+             hp : ${this.hp} 
+             strength : ${this.strength}  
+             endurance: ${this.endurance}`;
+        p.className = `paragraphe-p${this.id}`;
+        perso.prepend(p);
     };
     attaquer(target){
-        // console.log(`${this.nom} effectue ${this.jouertour(Math.floor(Math.random() * this.attaques.length))} contre ${target.nom} avec une force de ${this.strength} et ${target.nom} perd ${this.strength} hp.`);
         target.subirDommage(this.strength);
         this.endurance-=2;
         let choixAttaque = this.jouertour(Math.floor(Math.random() * this.attaques.length))
@@ -96,15 +100,3 @@ class Spell {
     }
 }
 export {Personnage, Spell};
-
-
-// let personnage1 = new Personnage("Borg")
-// let personnage2 = new Personnage("Klaus")
-
-// // display informations of each character:
-// personnage1.annonce()
-// personnage1.attaquer(personnage2)
-// console.log(personnage1.getHp)
-// console.log(personnage2.getHp)
-// console.log(personnage1.getEndurance)
-// console.log(personnage2.getEndurance)

@@ -12,17 +12,17 @@
 <body>
     <div id="wrapper">
         <div id="personnage-p1">
-            <img id="p1" src="assets/vampire.png" alt="personnage" />
+            <img id="p1" src="assets/image.png" alt="personnage" />
         </div>
         <div id="personnage-p2">
-            <img id="p2" src="assets/vampire.png" alt="personnage" />
+            <img id="p2" src="assets/image.png" alt="personnage" />
         </div>
         <button onclick="p1.annonce();">Annonce p1</button>
         <button onclick="p2.annonce();">Annonce p2</button>
     </div>
 </body>
 <script type="text/javascript">
-    const p1 = new Personnage(1, "Vampirette");
-    const p2 = new Personnage(2, "Sanguy");
+    const p1 = new Personnage(1,"Borg", [new Spell("'attaque sournoise'", 40, 10, () => {console.log("C'est sournois !")})])
+    const p2 = new Personnage(2,"Klaus", [new Spell("'se Faire Jeter Comme Un Malpropre'", 20, 30, () => {console.log("Tu vas te faire jeter comme un malpropre !")})])
 </script>
 </html>
